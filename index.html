@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Cors Proxy</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <script>
+    var electron = require('electron');
+    var serverHost = electron.remote.getGlobal('serverHost')
+    document.write(serverHost + '/')
+  </script>
+  <br>
+  <script>
+    document.write(`Prepend like this to enable Cors ${serverHost}/https://cors-blocked.resource`)
+  </script>
+</body>
+
+</html>
